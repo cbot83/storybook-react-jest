@@ -19,17 +19,24 @@ async function getDiff() {
         ignore: "antialiasing"
     };
  
+    // Below here is where we have to loop through the images.
+
     // The parameters can be Node Buffers
     // data is the same as usual with an additional getBuffer() function
     const data = await compareImages(
         await fs.readFile("./1/example.png"),
-        await fs.readFile("./2/example.png"),
+        await fs.readFile("./3/example.png"),
         options
     );
 
     console.log('DATA: ', data.misMatchPercentage)
  
-    // await fs.writeFile("./output.png", data.getBuffer());
+    const match = data.misMatchPercentage < 1; // need to test and define what is a match
+
+    if (!match) {
+        await fs.writeFile("./output.png", data.getBuffer());
+    }
+    
 }
  
 getDiff();
