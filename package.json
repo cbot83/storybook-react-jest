@@ -1,0 +1,19 @@
+{
+  "name": "storybookjest",
+  "version": "1.0.0",
+  "description": "Testing out CDD and automated testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbot83/storybook-react-jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbot83/storybook-react-jest/issues"
+  },
+  "homepage": "https://github.com/cbot83/storybook-react-jest#readme"
+}
